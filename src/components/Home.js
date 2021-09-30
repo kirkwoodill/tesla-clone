@@ -7,7 +7,34 @@ function Home() {
     return (
         <div>
             <Container>
-             <Section />
+             <Section 
+                title = "Model S"
+                description = "Order Online for Touchless Delivery"
+                background = "model-s.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+             />
+             <Section 
+                title = "Model Y"
+                description = "Order Online for Touchless Delivery"
+                background = "model-y.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+             />
+             <Section 
+                title = "Model 3"
+                description = "Order Online for Touchless Delivery"
+                background = "model-3.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+             />
+             <Section 
+                title = "Model X"
+                description = "Order Online for Touchless Delivery"
+                background = "model-x.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+             />
             </Container>
         </div>
     )
