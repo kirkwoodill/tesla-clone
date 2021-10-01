@@ -35,6 +35,27 @@ function Home() {
                 leftBtnText = "Custom Order"
                 rightBtnText = "Existing Inventory"
              />
+             <Section 
+                title = "Lowest Cost Solar Panels in America"
+                description = "Money-back guarantee"
+                background = "solar-panel.jpg"
+                leftBtnText = "Order now"
+                rightBtnText = "Learn more"
+             />
+             <Section 
+                title = "Solar for New Roofs"
+                description = "Solar Roof Costs Less Than a New Roof Plus Solar Panels"
+                background = "solar-roof.jpg"
+                leftBtnText = "Order now"
+                rightBtnText = "Learn more"
+             />
+            <Section 
+                title = "Accessories"
+                description = ""
+                background = "accessories.jpg"
+                leftBtnText = "Shop Now"
+                rightBtnText = ""
+             />
             </Container>
         </div>
     )

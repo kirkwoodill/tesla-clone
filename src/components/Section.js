@@ -13,9 +13,11 @@ function Section({ title, description, leftBtnText, rightBtnText, background }) 
                     <LeftButton>
                         { leftBtnText }
                     </LeftButton>
-                    <RightButton>
-                        { rightBtnText }
-                    </RightButton>
+                    { rightBtnText &&                     
+                        <RightButton>
+                            { rightBtnText }
+                        </RightButton>
+                    }
                 </ButtonGroup>
                 <DownArrow src="/images/down-arrow.svg"/>
             </Buttons>
@@ -31,7 +33,7 @@ const Wrap = styled.div`
     height: 100vh;
     background: orange;
     background-size: cover;
-    background-postion: center;
+    background-postion: 50% 50%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
