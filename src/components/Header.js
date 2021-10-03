@@ -2,19 +2,22 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { selectCars } from '../features/car/carSlice';
+import { useSelector } from 'react-redux'
 
 function Header() {
-    const [burgerStatus, setBurgerStatus] = useState(false);
+    const [burgerStatus, setBurgerStatus] = useState(true);
+    const cars = useSelector(selectCars)
+
     return (
         <Container>
             <a>
                 <img src="/images/logo.svg" alt="Tesla" />
             </a>
             <Menu>
-                <a href="#">Model S</a>
-                <a href="#">Model 3</a>
-                <a href="#">Model X</a>
-                <a href="#">Model Y</a>
+                {cars && cars.map((car, index) =>
+                    <a key={index} href="#">{ car }</a>
+                )}
             </Menu>
             <RightMenu>
                 <a href="#">Shop</a>
@@ -23,16 +26,26 @@ function Header() {
             </RightMenu>
             <BurgerNav show = {burgerStatus}>
                 <CloseWrapper>
-                    <BurgerClose />
+                    <BurgerClose onClick={()=>setBurgerStatus(false)}/>
                 </CloseWrapper>
 
+                {cars && cars.map((car, index) =>
+                    <li>
+                        <a key={index} href="#">{ car }</a>
+                    </li>
+                )}
+                <li><a href="#">Coporate</a></li>
                 <li><a href="#">Existing Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
-                <li><a href="#">Trade-in</a></li>
-                <li><a href="#">Cybertruck</a></li>
-                <li><a href="#">Roadster</a></li>
-                <li><a href="#">Existing Inventory</a></li>
-                <li><a href="#">Existing Inventory</a></li>
+                <li><a href="#">Trade-In</a></li>
+                <li><a href="#">Test Drive</a></li>
+                <li><a href="#">Powerwall</a></li>
+                <li><a href="#">Energy</a></li>
+                <li><a href="#">Commercial Energy</a></li>
+                <li><a href="#">Utilities</a></li>
+                <li><a href="#">Charging</a></li>
+                <li><a href="#">Find Us</a></li>
+                <li><a href="#">Support</a></li>
             </BurgerNav>
         </Container>
     )
@@ -103,7 +116,8 @@ const BurgerNav = styled.div`
     flex-direction: column;
     text-align: start;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 8px 16px 0px;
-    transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'}
+    transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
+    transition: transform 0.2s ease-in;
 
     li {
         padding: 15px 0;
