@@ -23,7 +23,7 @@ function Home() {
              />
              <Section 
                 title = "Model 3"
-                description = "Order Online for Touchless Delivery"
+                description = "$8,625 Clean Car Discount now available to residents and businesses in New Zealand on eligible Model 3."
                 background = "model-3.jpg"
                 leftBtnText = "Custom Order"
                 rightBtnText = "Existing Inventory"
