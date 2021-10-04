@@ -6,7 +6,7 @@ import { selectCars } from '../features/car/carSlice';
 import { useSelector } from 'react-redux'
 
 function Header() {
-    const [burgerStatus, setBurgerStatus] = useState(true);
+    const [burgerStatus, setBurgerStatus] = useState(false);
     const cars = useSelector(selectCars)
 
     return (
@@ -21,7 +21,7 @@ function Header() {
             </Menu>
             <RightMenu>
                 <a href="#">Shop</a>
-                <a href="#">Tesla Account</a>
+                <a href="#">Account</a>
                 <CustomMenu onClick={()=>setBurgerStatus(true)}/>
             </RightMenu>
             <BurgerNav show = {burgerStatus}>
@@ -74,7 +74,6 @@ const Menu = styled.div`
 
     a {
         font-weight: 600;
-        text-transform: uppercase;
         padding: 0 10px;
         flex-wrap: nowrap;
     }
@@ -89,7 +88,6 @@ const RightMenu = styled.div`
     align-items: center;
     a {
         font-weight: 600;
-        text-transform: uppercase;
         margin-right: 10px;
         flex-wrap: nowrap;
     }
