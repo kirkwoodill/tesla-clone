@@ -19,7 +19,8 @@
     "react-snap-scroll": "^0.0.5",
     "scroll-snap": "^3.2.4",
     "style-components": "^0.1.0",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.1",
+    "tailwindcss": "^2.2.16"
   },
   "scripts": {
     "start": "react-scripts start",
